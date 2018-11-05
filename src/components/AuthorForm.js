@@ -8,12 +8,15 @@ const AuthorForm = (props) => {
     return (
       <form onSubmit={(event) => {
         props.handleSubmit(messageField.name.value, messageField.message.value); event.preventDefault(); event.target.reset();}}>
-          <input ref={input => messageField.name = input} placeholder="Enter Name here"/>
-          <input ref={input => messageField.message = input} placeholder="Enter Message here"/>
-            <button>Submit</button>
+            <div className='ui input'>
+              <input ref={input => messageField.name = input} placeholder="Enter Name here"/>
+              <input ref={input => messageField.message = input} placeholder="Enter Message here"/>
+            </div>
+          <br></br>
+              <button className="ui green basic button">Submit</button>
       </form>
     )
-  
+
 
 } //end of functional component
 

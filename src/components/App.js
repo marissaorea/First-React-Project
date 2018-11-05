@@ -64,10 +64,10 @@ class App extends Component {
       .then((authorObj) => {
           let authors = authorObj.map((author) => {
             return (
-              <div key={author.id}>
+              <div className="message-container" key={author.id}>
                 <p>Author: {author.real_name}</p>
                 <p>Message: {author.message}</p>
-                <button onClick={ () => this.handleDelete(author.id)}> Delete</button>
+                <button className="ui red basic button" onClick={ () => this.handleDelete(author.id)}> Delete</button>
               </div>
           )
         })
